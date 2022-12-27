@@ -139,7 +139,6 @@ public class Enigma {
         Rotator3.put('A', last);
     }
 
-
     public char enigmaDecoding(char c) {
 
         char answer = getPlugBoardValueByKey(getRotator3ValueByKey(getRotator2ValueByKey(getRotator1ValueByKey(getReflectorValueByKey(getRotator1ValueByKey(getRotator2ValueByKey(getRotator3ValueByKey(getPlugBoardValueByKey(c)))))))));

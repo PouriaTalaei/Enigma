@@ -4,11 +4,8 @@ import java.io.FileReader;
 import java.util.Objects;
 
 public class ScanFile {
-    Enigma enigma = new Enigma();
-
-
-    public void readFile(File test2, String input) {
-        try (BufferedReader fileReader = new BufferedReader(new FileReader(test2))) {
+    public void readFile(File file, String input,Enigma enigma) {
+        try (BufferedReader fileReader = new BufferedReader(new FileReader(file))) {
             String line = "";
             while ((line = fileReader.readLine()) != null) {
                 String[] lineItems = line.split(" "); //splitting the line and adding its items in String[]
@@ -19,8 +16,6 @@ public class ScanFile {
                         enigma.rotator2(fileReader.readLine());
                         enigma.rotator3(fileReader.readLine());
                     }
-
-
             }
         } catch (Exception e) {
             System.out.println("Something went wrong");

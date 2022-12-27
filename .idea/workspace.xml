@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8dfddb0-f75a-4cad-be6a-a1c509819479" name="Changes" comment="Get Value of Maps &amp; Change Rotator">
+    <list default="true" id="f8dfddb0-f75a-4cad-be6a-a1c509819479" name="Changes" comment="Decoding">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Enigma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enigma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ScanFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScanFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672156738451</updated>
-      <workItem from="1672156740512" duration="10549000" />
+      <workItem from="1672156740512" duration="11814000" />
     </task>
     <task id="LOCAL-00001" summary="Scan File">
       <created>1672162554986</created>
@@ -82,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672174919613</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Decoding">
+      <created>1672176387896</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672176387897</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +114,7 @@
     <MESSAGE value="Set PlugBoard" />
     <MESSAGE value="Set Rotator" />
     <MESSAGE value="Get Value of Maps &amp; Change Rotator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Get Value of Maps &amp; Change Rotator" />
+    <MESSAGE value="Decoding" />
+    <option name="LAST_COMMIT_MESSAGE" value="Decoding" />
   </component>
 </project>

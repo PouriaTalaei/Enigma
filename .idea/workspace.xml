@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8dfddb0-f75a-4cad-be6a-a1c509819479" name="Changes" comment="Scan File">
-      <change afterPath="$PROJECT_DIR$/src/Enigma.java" afterDir="false" />
+    <list default="true" id="f8dfddb0-f75a-4cad-be6a-a1c509819479" name="Changes" comment="make reflector">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Enigma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enigma.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672156738451</updated>
-      <workItem from="1672156740512" duration="3502000" />
+      <workItem from="1672156740512" duration="5310000" />
     </task>
     <task id="LOCAL-00001" summary="Scan File">
       <created>1672162554986</created>
@@ -54,7 +54,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672162554986</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="make reflector">
+      <created>1672164060341</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672164060341</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,6 +80,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Scan File" />
-    <option name="LAST_COMMIT_MESSAGE" value="Scan File" />
+    <MESSAGE value="make reflector" />
+    <option name="LAST_COMMIT_MESSAGE" value="make reflector" />
   </component>
 </project>

@@ -19,16 +19,16 @@ public class Enigma {
     }
 
     public void setReflector() {
-        int asciNumFirst = 65;
-        int asciNumLast = 90;
+        int asciiNumFirst = 97;
+        int asciiNumLast = 122;
         char cFirst;
         char c1Last;
         for (int i = 0; i < 26; i++) {
-            cFirst = (char) asciNumFirst;
-            c1Last = (char) asciNumLast;
+            cFirst = (char) asciiNumFirst;
+            c1Last = (char) asciiNumLast;
             Reflector.put(cFirst, c1Last);
-            asciNumFirst++;
-            asciNumLast--;
+            asciiNumFirst++;
+            asciiNumLast--;
         }
     }
 
@@ -38,13 +38,14 @@ public class Enigma {
         for (int i = 0; i < plugBoardStrArray.length; i++) {
             PlugBoard.put(plugBoardStrArray[i].charAt(0), plugBoardStrArray[i].charAt(1));
         }
-        for (int i = 0; i < plugBoardStrArray.length; i++) {
-            PlugBoard.put(plugBoardStrArray[i].charAt(1), plugBoardStrArray[i].charAt(0));
-        }
+//        for (int i = 0; i < plugBoardStrArray.length; i++) {
+//            PlugBoard.put(plugBoardStrArray[i].charAt(1), plugBoardStrArray[i].charAt(0));
+//        }
     }
 
-    public void rotator1(String rotate1Str) {  //    ascii A to Z is 65 to  90
-        int asciiNum = 65;
+    public void rotator1(String rotate1Line) {  //    ascii A to Z is 65 to  90
+        String rotate1Str = rotate1Line.substring(9, rotate1Line.length() - 1);
+        int asciiNum = 97;
         char c;
         for (int i = 0; i < rotate1Str.length(); i++) {
             c = (char) asciiNum;
@@ -53,8 +54,9 @@ public class Enigma {
         }
     }
 
-    public void rotator2(String rotate2Str) {  //    ascii A to Z is 65 to  90
-        int asciiNum = 65;
+    public void rotator2(String rotate2Line) {  //    ascii A to Z is 65 to  90
+        String rotate2Str = rotate2Line.substring(9, rotate2Line.length() - 1);
+        int asciiNum = 97;
         char c;
         for (int i = 0; i < rotate2Str.length(); i++) {
             c = (char) asciiNum;
@@ -64,8 +66,9 @@ public class Enigma {
     }
 
 
-    public void rotator3(String rotate3Str) {  //    ascii A to Z is 65 to  90
-        int asciiNum = 65;
+    public void rotator3(String rotate3Line) {  //    ascii A to Z is 65 to  90
+        String rotate3Str = rotate3Line.substring(9, rotate3Line.length() - 1);
+        int asciiNum = 97;
         char c;
         for (int i = 0; i < rotate3Str.length(); i++) {
             c = (char) asciiNum;
@@ -74,11 +77,9 @@ public class Enigma {
         }
     }
 
-
     public char getPlugBoardValueByKey(char c) {
-        if (PlugBoard.get(c) == null) {
-            exit(0);
-        }
+        if (PlugBoard.get(c) == null)
+            return c;
         return PlugBoard.get(c);
     }
 
@@ -100,43 +101,43 @@ public class Enigma {
 
 
     public void changeRotator1() {
-        int asciiNum = 90;
+        int asciiNum = 122;
         char c, c2;
-        char last = Rotator1.get('Z');
+        char last = Rotator1.get('z');
         for (int i = 0; i < 25; i++) {
             c = (char) asciiNum;
             c2 = (char) (asciiNum - 1);
             Rotator1.put(c, Rotator1.get(c2));
             asciiNum--;
         }
-        Rotator1.put('A', last);
+        Rotator1.put('a', last);
     }
 
     public void changeRotator2() {
-        int asciiNum = 90;
+        int asciiNum = 122;
         char c, c2;
-        char last = Rotator2.get('Z');
+        char last = Rotator2.get('z');
         for (int i = 0; i < 25; i++) {
             c = (char) asciiNum;
             c2 = (char) (asciiNum - 1);
             Rotator2.put(c, Rotator2.get(c2));
             asciiNum--;
         }
-        Rotator2.put('A', last);
+        Rotator2.put('a', last);
     }
 
 
     public void changeRotator3() {
-        int asciiNum = 90;
+        int asciiNum = 122;
         char c, c2;
-        char last = Rotator3.get('Z');
+        char last = Rotator3.get('z');
         for (int i = 0; i < 25; i++) {
             c = (char) asciiNum;
             c2 = (char) (asciiNum - 1);
             Rotator3.put(c, Rotator3.get(c2));
             asciiNum--;
         }
-        Rotator3.put('A', last);
+        Rotator3.put('a', last);
     }
 
     public char enigmaDecoding(char c) {

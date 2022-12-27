@@ -15,6 +15,7 @@ public class ScanFile {
                         enigma.rotator1(fileReader.readLine());
                         enigma.rotator2(fileReader.readLine());
                         enigma.rotator3(fileReader.readLine());
+                        return;
                     }
             }
         } catch (Exception e) {

@@ -1,6 +1,8 @@
 import java.util.HashMap;
 import java.util.Map;
 
+import static java.lang.System.exit;
+
 public class Enigma {
     Map<Character, Character> PlugBoard = new HashMap<>();
     Map<Character, Character> Rotator1 = new HashMap<>();
@@ -59,7 +61,6 @@ public class Enigma {
             Rotator2.put(c, rotate2Str.charAt(i));
             asciiNum++;
         }
-
     }
 
 
@@ -71,9 +72,72 @@ public class Enigma {
             Rotator3.put(c, rotate3Str.charAt(i));
             asciiNum++;
         }
-        System.out.println(Rotator3);
-
     }
 
+
+    public char getPlugBoardValueByKey(char c){
+        if (PlugBoard.get(c)==null) {
+            exit(0);
+        }
+        return PlugBoard.get(c);
+    }
+
+    public char getReflectorValueByKey(char c){
+        return Reflector.get(c);
+    }
+
+    public char getRotator1ValueByKey(char c){
+        return Rotator1.get(c);
+    }
+
+    public char getRotator2ValueByKey(char c){
+        return Rotator2.get(c);
+    }
+
+    public char getRotator3ValueByKey(char c){
+        return Rotator3.get(c);
+    }
+
+
+
+    public void changeRotator1(){
+        int asciNum = 90;
+        char c,c2;
+        char last = Rotator1.get('Z');
+        for (int i = 0; i < 25; i++) {
+            c = (char) asciNum;
+            c2 = (char) (asciNum-1) ;
+            Rotator1.put(c, Rotator1.get(c2));
+            asciNum--;
+        }
+        Rotator1.put('A' ,last);
+    }
+
+    public void changeRotator2(){
+        int asciNum = 90;
+        char c,c2;
+        char last = Rotator2.get('Z');
+        for (int i = 0; i < 25; i++) {
+            c = (char) asciNum;
+            c2 = (char) (asciNum-1) ;
+            Rotator2.put(c, Rotator2.get(c2));
+            asciNum--;
+        }
+        Rotator2.put('A' ,last);
+    }
+
+
+    public void changeRotator3(){
+        int asciNum = 90;
+        char c,c2;
+        char last = Rotator3.get('Z');
+        for (int i = 0; i < 25; i++) {
+            c = (char) asciNum;
+            c2 = (char) (asciNum-1) ;
+            Rotator3.put(c, Rotator3.get(c2));
+            asciNum--;
+        }
+        Rotator3.put('A' ,last);
+    }
 
 }

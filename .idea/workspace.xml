@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8dfddb0-f75a-4cad-be6a-a1c509819479" name="Changes" comment="Set PlugBoard">
+    <list default="true" id="f8dfddb0-f75a-4cad-be6a-a1c509819479" name="Changes" comment="Set Rotator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Enigma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enigma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ScanFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScanFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672156738451</updated>
-      <workItem from="1672156740512" duration="8008000" />
+      <workItem from="1672156740512" duration="9062000" />
     </task>
     <task id="LOCAL-00001" summary="Scan File">
       <created>1672162554986</created>
@@ -70,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672165964730</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Set Rotator">
+      <created>1672173135509</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672173135509</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +96,7 @@
     <MESSAGE value="Scan File" />
     <MESSAGE value="make reflector" />
     <MESSAGE value="Set PlugBoard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set PlugBoard" />
+    <MESSAGE value="Set Rotator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set Rotator" />
   </component>
 </project>

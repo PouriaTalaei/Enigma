@@ -43,7 +43,7 @@ public class Enigma {
         }
     }
 
-    public void rotator1(String rotate1Str){  //    ascii A to Z is 65 to  90
+    public void rotator1(String rotate1Str) {  //    ascii A to Z is 65 to  90
         int asciiNum = 65;
         char c;
         for (int i = 0; i < rotate1Str.length(); i++) {
@@ -53,7 +53,7 @@ public class Enigma {
         }
     }
 
-    public void rotator2(String rotate2Str){  //    ascii A to Z is 65 to  90
+    public void rotator2(String rotate2Str) {  //    ascii A to Z is 65 to  90
         int asciiNum = 65;
         char c;
         for (int i = 0; i < rotate2Str.length(); i++) {
@@ -64,7 +64,7 @@ public class Enigma {
     }
 
 
-    public void rotator3(String rotate3Str){  //    ascii A to Z is 65 to  90
+    public void rotator3(String rotate3Str) {  //    ascii A to Z is 65 to  90
         int asciiNum = 65;
         char c;
         for (int i = 0; i < rotate3Str.length(); i++) {
@@ -75,69 +75,91 @@ public class Enigma {
     }
 
 
-    public char getPlugBoardValueByKey(char c){
-        if (PlugBoard.get(c)==null) {
+    public char getPlugBoardValueByKey(char c) {
+        if (PlugBoard.get(c) == null) {
             exit(0);
         }
         return PlugBoard.get(c);
     }
 
-    public char getReflectorValueByKey(char c){
+    public char getReflectorValueByKey(char c) {
         return Reflector.get(c);
     }
 
-    public char getRotator1ValueByKey(char c){
+    public char getRotator1ValueByKey(char c) {
         return Rotator1.get(c);
     }
 
-    public char getRotator2ValueByKey(char c){
+    public char getRotator2ValueByKey(char c) {
         return Rotator2.get(c);
     }
 
-    public char getRotator3ValueByKey(char c){
+    public char getRotator3ValueByKey(char c) {
         return Rotator3.get(c);
     }
 
 
-
-    public void changeRotator1(){
-        int asciNum = 90;
-        char c,c2;
+    public void changeRotator1() {
+        int asciiNum = 90;
+        char c, c2;
         char last = Rotator1.get('Z');
         for (int i = 0; i < 25; i++) {
-            c = (char) asciNum;
-            c2 = (char) (asciNum-1) ;
+            c = (char) asciiNum;
+            c2 = (char) (asciiNum - 1);
             Rotator1.put(c, Rotator1.get(c2));
-            asciNum--;
+            asciiNum--;
         }
-        Rotator1.put('A' ,last);
+        Rotator1.put('A', last);
     }
 
-    public void changeRotator2(){
-        int asciNum = 90;
-        char c,c2;
+    public void changeRotator2() {
+        int asciiNum = 90;
+        char c, c2;
         char last = Rotator2.get('Z');
         for (int i = 0; i < 25; i++) {
-            c = (char) asciNum;
-            c2 = (char) (asciNum-1) ;
+            c = (char) asciiNum;
+            c2 = (char) (asciiNum - 1);
             Rotator2.put(c, Rotator2.get(c2));
-            asciNum--;
+            asciiNum--;
         }
-        Rotator2.put('A' ,last);
+        Rotator2.put('A', last);
     }
 
 
-    public void changeRotator3(){
-        int asciNum = 90;
-        char c,c2;
+    public void changeRotator3() {
+        int asciiNum = 90;
+        char c, c2;
         char last = Rotator3.get('Z');
         for (int i = 0; i < 25; i++) {
-            c = (char) asciNum;
-            c2 = (char) (asciNum-1) ;
+            c = (char) asciiNum;
+            c2 = (char) (asciiNum - 1);
             Rotator3.put(c, Rotator3.get(c2));
-            asciNum--;
+            asciiNum--;
         }
-        Rotator3.put('A' ,last);
+        Rotator3.put('A', last);
     }
 
+
+    public char enigmaDecoding(char c) {
+
+        char answer = getPlugBoardValueByKey(getRotator3ValueByKey(getRotator2ValueByKey(getRotator1ValueByKey(getReflectorValueByKey(getRotator1ValueByKey(getRotator2ValueByKey(getRotator3ValueByKey(getPlugBoardValueByKey(c)))))))));
+
+        countRotate1++;
+        if (countRotate1 == 26) {
+            changeRotator1();
+            countRotate2++;
+            countRotate1 = 0;
+        }
+        if (countRotate2 == 26) {
+            changeRotator2();
+            countRotate3++;
+            countRotate2 = 0;
+        }
+        if (countRotate3 == 26) {
+            changeRotator3();
+            countRotate1++;
+            countRotate3 = 0;
+        }
+        return answer;
+    }
 }

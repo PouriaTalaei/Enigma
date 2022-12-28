@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8dfddb0-f75a-4cad-be6a-a1c509819479" name="Changes" comment="debug1">
+    <list default="true" id="f8dfddb0-f75a-4cad-be6a-a1c509819479" name="Changes" comment="Reverse Rotor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Enigma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enigma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ScanFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScanFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672156738451</updated>
-      <workItem from="1672156740512" duration="20633000" />
+      <workItem from="1672156740512" duration="25965000" />
     </task>
     <task id="LOCAL-00001" summary="Scan File">
       <created>1672162554986</created>
@@ -118,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672181831362</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Reverse Rotor">
+      <created>1672260946343</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672260946343</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +151,8 @@
     <MESSAGE value="Decoding" />
     <MESSAGE value="void main" />
     <MESSAGE value="debug1" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug1" />
+    <MESSAGE value="Reverse Rotor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reverse Rotor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -153,6 +161,11 @@
           <url>file://$PROJECT_DIR$/src/Main.java</url>
           <line>17</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

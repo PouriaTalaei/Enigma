@@ -41,9 +41,9 @@ public class Enigma {
         for (int i = 0; i < plugBoardStrArray.length; i++) {
             PlugBoard.put(plugBoardStrArray[i].charAt(0), plugBoardStrArray[i].charAt(1));
         }
-//        for (int i = 0; i < plugBoardStrArray.length; i++) {
-//            PlugBoard.put(plugBoardStrArray[i].charAt(1), plugBoardStrArray[i].charAt(0));
-//        }
+        for (int i = 0; i < plugBoardStrArray.length; i++) {
+            PlugBoard.put(plugBoardStrArray[i].charAt(1), plugBoardStrArray[i].charAt(0));
+        }
     }
 
     public void rotor1(String rotor1Line) {  //    ascii A to Z is 65 to  90
@@ -112,6 +112,7 @@ public class Enigma {
     public char getRotor2KeyByValue(char c) {
         return Rotor2Rev.get(c);
     }
+
     public char getRotor3KeyByValue(char c) {
         return Rotor3Rev.get(c);
     }
@@ -156,7 +157,8 @@ public class Enigma {
         }
         Rotor3.put('a', last);
     }
-        public Map<Character,Character> reversRotor(Map<Character,Character> rotor) {
+
+    public Map<Character, Character> reversRotor(Map<Character, Character> rotor) {
         Map<Character, Character> revRotor = new HashMap<>();
         char first = 97;
         for (int i = 0; i < 26; i++) {
@@ -171,24 +173,21 @@ public class Enigma {
 
         char answer = getPlugBoardValueByKey(getRotor3KeyByValue(getRotor2KeyByValue(getRotor1KeyByValue(getReflectorValueByKey(getRotor1ValueByKey(getRotor2ValueByKey(getRotor3ValueByKey(getPlugBoardValueByKey(c)))))))));
 
-        countRotor1++;
-        if (countRotor1 == 26) {
-            changeRotor1();
-            Rotor1Rev = reversRotor(Rotor1);
-            countRotor2++;
-            countRotor1 = 0;
-        }
-        if (countRotor2 == 26) {
+        changeRotor3();
+        Rotor3Rev = reversRotor(Rotor3);
+        countRotor3++;
+
+        if (countRotor3 == 26) {
             changeRotor2();
             Rotor2Rev = reversRotor(Rotor2);
-            countRotor3++;
-            countRotor2 = 0;
-        }
-        if (countRotor3 == 26) {
-            changeRotor3();
-            Rotor3Rev = reversRotor(Rotor3);
-            countRotor1++;
+            countRotor2++;
             countRotor3 = 0;
+        }
+        if (countRotor2 == 26) {
+            changeRotor1();
+            Rotor1Rev = reversRotor(Rotor1);
+            countRotor1++;
+            countRotor2 = 0;
         }
         return answer;
     }

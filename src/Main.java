@@ -7,7 +7,7 @@ public class Main {
         Enigma enigma = new Enigma();
 
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter the date : ");
+        System.out.print("Enter the date (yyyy/mm/dd) : ");
         String date = input.next();
         System.out.print("Enter the codedMessage : ");
         String codedMessage = input.next();

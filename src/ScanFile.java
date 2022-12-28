@@ -21,7 +21,5 @@ public class ScanFile {
         } catch (Exception e) {
             System.out.println("Something went wrong");
         }
-        // return Data;
-
     }
 }

@@ -14,8 +14,7 @@ public class Main {
 
         scanFile.readFile(new File("EnigmaFile.txt"), date, enigma);
         char strChars[] = codedMessage.toCharArray();
-        for (char c : strChars) {
+        for (char c : strChars)
             System.out.print(enigma.enigmaDecoding(c));
-        }
     }
 }

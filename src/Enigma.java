@@ -1,8 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
 
-import static java.lang.System.exit;
-
 public class Enigma {
     Map<Character, Character> PlugBoard = new HashMap<>();
     Map<Character, Character> Rotor1 = new HashMap<>();
@@ -13,7 +11,7 @@ public class Enigma {
     Map<Character, Character> Rotor3Rev = new HashMap<>();
     Map<Character, Character> Reflector = new HashMap<>();
 
-    int countRotor1 = 0; // (nRotate1+1)%26
+    int countRotor1 = 0;
     int countRotor2 = 0;
     int countRotor3 = 0;
 
@@ -38,15 +36,14 @@ public class Enigma {
     public void plugBoard(String plugBoardLine) {
         String plugBoardStr = plugBoardLine.substring(12, plugBoardLine.length() - 1);
         String plugBoardStrArray[] = plugBoardStr.split(", ");
-        for (int i = 0; i < plugBoardStrArray.length; i++) {
+        for (int i = 0; i < plugBoardStrArray.length; i++)
             PlugBoard.put(plugBoardStrArray[i].charAt(0), plugBoardStrArray[i].charAt(1));
-        }
-        for (int i = 0; i < plugBoardStrArray.length; i++) {
+
+        for (int i = 0; i < plugBoardStrArray.length; i++)
             PlugBoard.put(plugBoardStrArray[i].charAt(1), plugBoardStrArray[i].charAt(0));
-        }
     }
 
-    public void rotor1(String rotor1Line) {  //    ascii A to Z is 65 to  90
+    public void rotor1(String rotor1Line) {
         String rotor1Str = rotor1Line.substring(9, rotor1Line.length() - 1);
         int asciiNum = 97;
         char c;
@@ -58,7 +55,7 @@ public class Enigma {
         }
     }
 
-    public void rotor2(String rotor2Line) {  //    ascii A to Z is 65 to  90
+    public void rotor2(String rotor2Line) {
         String rotor2Str = rotor2Line.substring(9, rotor2Line.length() - 1);
         int asciiNum = 97;
         char c;
@@ -70,8 +67,7 @@ public class Enigma {
         }
     }
 
-
-    public void rotor3(String rotor3Line) {  //    ascii A to Z is 65 to  90
+    public void rotor3(String rotor3Line) {
         String rotor3Str = rotor3Line.substring(9, rotor3Line.length() - 1);
         int asciiNum = 97;
         char c;
@@ -144,7 +140,6 @@ public class Enigma {
         Rotor2.put('a', last);
     }
 
-
     public void changeRotor3() {
         int asciiNum = 122;
         char c, c2;
@@ -168,11 +163,9 @@ public class Enigma {
         return revRotor;
     }
 
-
     public char enigmaDecoding(char c) {
 
         char answer = getPlugBoardValueByKey(getRotor3KeyByValue(getRotor2KeyByValue(getRotor1KeyByValue(getReflectorValueByKey(getRotor1ValueByKey(getRotor2ValueByKey(getRotor3ValueByKey(getPlugBoardValueByKey(c)))))))));
-
         changeRotor3();
         Rotor3Rev = reversRotor(Rotor3);
         countRotor3++;

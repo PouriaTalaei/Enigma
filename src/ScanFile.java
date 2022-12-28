@@ -12,9 +12,9 @@ public class ScanFile {
                 if (Objects.equals(lineItems[0], "Date:"))
                     if (Objects.equals(lineItems[1], input)) {
                         enigma.plugBoard(fileReader.readLine());
-                        enigma.rotator1(fileReader.readLine());
-                        enigma.rotator2(fileReader.readLine());
-                        enigma.rotator3(fileReader.readLine());
+                        enigma.rotor1(fileReader.readLine());
+                        enigma.rotor2(fileReader.readLine());
+                        enigma.rotor3(fileReader.readLine());
                         return;
                     }
             }
